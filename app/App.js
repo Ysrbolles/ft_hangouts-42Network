@@ -1,36 +1,33 @@
 
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer, } from "@react-navigation/native"
-import HomeScreen from './Screens/HomeScreen';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import HomeScreen from './src/Screens/HomeScreen';
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { screensEnabled } from 'react-native-screens';
+import { Header } from "./src/Screens"
+// import { scale } from 'react-native-size-matters';
 
 const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 export default function App() {
 	return (
-		<NavigationContainer>
-			<Tab.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-				<Tab.Screen name="Home" component={HomeScreen}
-					options={{
-							headerTitleAlign: 'center',
-						}}
-				/>
-				<Tab.Screen name="Messages" component={HomeScreen}
-					options={{
-							headerTitleAlign: 'center',
-						}}
-				/>
-			</Tab.Navigator>
-		</NavigationContainer>
+		<SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
+			{/* <View> */}
+			<Header />
+			<View style={styles.container}>
+				<Text>Content</Text>
+			</View>
+		</SafeAreaView>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		backgroundColor: '#fff',
+		// flex: 1,
+		// height: '100%',
+		backgroundColor: 'black',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
+
 });
