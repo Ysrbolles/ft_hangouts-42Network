@@ -1,12 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer, } from "@react-navigation/native"
+import HomeScreen from './Screens/HomeScreen';
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
+
+const Stack = createNativeStackNavigator()
+const Tab = createBottomTabNavigator()
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Text>Bongola!</Text>
-			<StatusBar style="auto" />
-		</View>
+		<NavigationContainer>
+			<Tab.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+				<Tab.Screen name="Home" component={HomeScreen}
+					options={{
+							headerTitleAlign: 'center',
+						}}
+				/>
+				<Tab.Screen name="Messages" component={HomeScreen}
+					options={{
+							headerTitleAlign: 'center',
+						}}
+				/>
+			</Tab.Navigator>
+		</NavigationContainer>
 	);
 }
 
