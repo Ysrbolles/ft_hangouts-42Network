@@ -7,7 +7,7 @@ const ContactContent = ({children}) => {
         <View style={styles.container}>
             <View >
                 <Text style={styles.label}>Contacts</Text>
-                <Text>25 contact</Text>
+                <Text style={styles.contactnbr}>25 contact</Text>
             </View>
             <View>
                 {children}
@@ -34,5 +34,12 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         color: '#5EBC7B'
+    },
+    contactnbr: {
+        fontWeight: '300',
+        fontSize: 12,
+        marginTop: 3,
+        opacity: 0.5,
+        marginLeft: 5
     }
 })

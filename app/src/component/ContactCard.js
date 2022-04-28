@@ -3,7 +3,7 @@ import { StyleSheet, Text, View , Pressable, Image} from "react-native";
 
 const ContactCard = ({item}) => {
     return (
-        <Pressable style={[styles.container, styles.center]}>
+        <Pressable style={[styles.container, styles.center]} >
             <View style={[styles.center, styles.Contactimg]}>
                 <Image style={ styles.Contactimg} source={{uri: item.image,}} />
             </View>
@@ -24,7 +24,7 @@ export default ContactCard;
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 30,
+        marginTop: 25,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
