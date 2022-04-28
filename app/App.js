@@ -58,14 +58,14 @@ export default function App() {
 	  }, [])
 
 	return (
-		<SafeAreaView style={{ flex: 1, backgroundColor: '#EFF4F7' }}>
+		<View style={{ flex: 1, backgroundColor: '#EFF4F7' }}>
 			<Header />
 			<ScrollView  style={styles.container}>
 				<ContactSection>
 					<FlatList data={Contacts} renderItem={({ item, index }) => <ContactCard item={item} key={index} />} keyExtractor={(item, index) => index.toString()} />
 				</ContactSection>
 			</ScrollView>
-		</SafeAreaView>
+		</View>
 	);
 }
 

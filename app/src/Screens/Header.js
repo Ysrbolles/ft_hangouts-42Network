@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 
 export default Header = () => {
 
@@ -11,7 +11,7 @@ export default Header = () => {
             <View style={styles.menu}>
                  <MaterialCommunityIcons name="theme-light-dark" size={32} color="#5EBC7B" />
                  <MaterialCommunityIcons name="translate" size={32} color="#5EBC7B" />
-                 <MaterialCommunityIcons name="menu" size={32} color="#5EBC7B" />
+                 <Feather name="more-vertical" size={32} color="#5EBC7B" />
             </View>
         </View>
     )
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 20,
+        marginTop: 20,
         backgroundColor: '#EFF4F7',
         borderBottomRightRadius: 30,
         borderBottomLeftRadius: 30
