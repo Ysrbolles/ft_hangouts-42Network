@@ -1,9 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
-
-
-
 export default Header = () => {
 
     return (
