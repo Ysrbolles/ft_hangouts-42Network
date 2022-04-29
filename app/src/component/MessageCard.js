@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { StyleSheet, Text, View, Pressable, Image } from "react-native";
 
 
-const ContactCard = ({ item }) => {
+const MessageCard = ({ item }) => {
 
     useEffect(() => {
         console.log(item.selected)
@@ -16,16 +16,16 @@ const ContactCard = ({ item }) => {
             <View style={styles.Contactinfo}>
                 <View style={styles.contact}>
                     <Text style={styles.contactname}>{item.name}</Text>
-                    {/* <Text style={styles.contactnumber}> 10:11 PM</Text> */}
+                    <Text style={styles.contactnumber}> {item.time}</Text>
                 </View>
 
-                <Text style={styles.contactnumber}>{item.Number}</Text>
+                <Text style={styles.contactnumber}>{item.message}</Text>
             </View>
         </Pressable>
     )
 }
 
-export default ContactCard;
+export default MessageCard;
 
 
 const styles = StyleSheet.create({
