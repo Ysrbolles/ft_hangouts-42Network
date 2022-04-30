@@ -1,10 +1,10 @@
 import { FlatList, Pressable, ScrollView, StyleSheet, View } from "react-native";
-import { ContactSection, Header, MessagesContent } from "../../Screens";
+import {  Header, Content } from "../../Screens";
 import { Entypo } from '@expo/vector-icons';
 
 const NewAction = () => {
     return (
-        <Pressable>
+        <Pressable onPress={() => alert("test")}>
             <View style={styles.newAction}>
                 <Entypo name="plus" size={24} color="white" />
             </View>
@@ -18,12 +18,9 @@ const Container = ({ children, component }) => {
         <View style={{ backgroundColor: '#EFF4F7' }}>
             <Header />
             <ScrollView style={styles.container}>
-                {component === "message" && <MessagesContent>
+                <Content title={component === "message" ? "Messages" : "Contacts"} subtitle={component === "message" ? "25 Messages" : " 30 Contacts"}>
                     {children}
-                </MessagesContent>}
-                {component === "contact" && <ContactSection>
-                    {children}
-                </ContactSection>}
+                </Content>
             </ScrollView>
             <NewAction />
         </View>
@@ -45,7 +42,7 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60,
         position: 'absolute',
-        bottom: 40,
+        bottom: 20,
         right: 25,
         backgroundColor: '#5EBC7B',
         borderRadius: 50,

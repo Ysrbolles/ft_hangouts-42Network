@@ -27,6 +27,7 @@ export default TabNavigationStack = () => {
                     tabBarShowLabel: false,
                     tabBarStyle: {
                         // ...shadrow,
+                        backgroundColor: '#EFF4F7',
                         position: 'absolute',
                         height: 90,
                         width: '100%',

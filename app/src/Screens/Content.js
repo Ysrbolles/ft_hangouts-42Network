@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
 
 
-const ContactContent = ({children}) => {
+const Content = ({title, subtitle, children}) => {
 
     return (
         <View style={styles.container}>
             <View >
-                <Text style={styles.label}>Contacts</Text>
-                <Text style={styles.contactnbr}>25 contact</Text>
+                <Text style={styles.label}>{title}</Text>
+                <Text style={styles.contactnbr}>{subtitle}</Text>
             </View>
             <View>
                 {children}
@@ -16,7 +16,7 @@ const ContactContent = ({children}) => {
     )
 }
 
-export default ContactContent;
+export default Content;
 
 const styles = StyleSheet.create({
     container: {

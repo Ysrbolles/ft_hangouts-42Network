@@ -4,7 +4,7 @@ import { Header, ContactSection } from "./"
 import { MessageCard } from '../component';
 import { useEffect } from 'react';
 import Container from "../component/ContainerScreen"
-import MessagesContent from './MessageSection';
+import MessagesContent from './Content';
 
 
 
