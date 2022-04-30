@@ -1,6 +1,8 @@
 import { FlatList, Pressable, ScrollView, StyleSheet, View } from "react-native";
 import {  Header, Content } from "../../Screens";
+import MyModal from "../Modal";
 import { Entypo } from '@expo/vector-icons';
+
 
 const NewAction = () => {
     return (
@@ -23,6 +25,7 @@ const Container = ({ children, component }) => {
                 </Content>
             </ScrollView>
             <NewAction />
+            <MyModal />
         </View>
     )
 }
