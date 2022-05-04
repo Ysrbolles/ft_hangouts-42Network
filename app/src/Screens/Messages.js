@@ -1,7 +1,7 @@
 
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, FlatList, StatusBar, LogBox, Pressable } from 'react-native';
 import { Header, ContactSection } from "./"
-import { MessageCard } from '../component';
+import { MessageCard ,  NewAction} from '../component';
 import { useEffect } from 'react';
 import Container from "../component/ContainerScreen"
 import MessagesContent from './Content';
@@ -68,8 +68,6 @@ const Contacts = [
 
 ]
 
-
-
 export default function App() {
 
     useEffect(() => {
@@ -77,9 +75,12 @@ export default function App() {
     }, [])
 
     return (
+        <View>
         <Container component="message">
             <FlatList data={Contacts} renderItem={({ item, index }) => <MessageCard item={item} key={index} />} keyExtractor={(item, index) => index.toString()} />
         </Container>
+        <NewAction />
+        </View>
     );
 }
 
@@ -91,17 +92,5 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
-    },
-    newAction: {
-        width: 60,
-        height: 60,
-        position: 'absolute',
-        bottom: 40,
-        right: 25,
-        backgroundColor: '#5EBC7B',
-        borderRadius: 50,
-        justifyContent: 'center',
-        alignItems: 'center'
     }
-
 });

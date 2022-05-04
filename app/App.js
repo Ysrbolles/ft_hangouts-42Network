@@ -4,9 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { Header, ContactSection } from "./src/Screens"
 import { ContactCard } from './src/component';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Entypo } from '@expo/vector-icons';
-import TabNavigationStack from './src/Routes/TabNavigationStack';
+import { TabNavigationStack, MainStack } from './src/Routes';
 
 
 const Contacts = [
@@ -73,13 +73,15 @@ const NewAction = () => {
 
 export default function App() {
 
+	const [isTab, setIsTab] = useState(false)
+
 	useEffect(() => {
 		LogBox.ignoreLogs(["VirtualizedLists should never be nested"])
 	}, [])
 
 	return (
-		
-			<TabNavigationStack />
+
+		isTab ? <TabNavigationStack /> : <MainStack />
 
 	);
 }
