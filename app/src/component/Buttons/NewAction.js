@@ -1,18 +1,16 @@
-import { Pressable, View , StyleSheet, Alert} from "react-native"
+import { Pressable, View , StyleSheet, Alert, TouchableOpacity} from "react-native"
 import { Entypo } from '@expo/vector-icons';
 
 
-const NewAction = () => {
+export default NewAction = () => {
     return (
-        <Pressable onPress={() => console.log("koka")}>
-            <View style={styles.newAction}>
+        <Pressable onPress={() => console.log('from')}>
+            <View style={styles.newAction} >
                 <Entypo name="plus" size={24} color="white" />
             </View>
         </Pressable>
     )
 }
-
-export default NewAction
 
 
 const styles = StyleSheet.create({
@@ -20,8 +18,8 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60,
         position: 'absolute',
-        bottom: 5,
-        right: 2,
+        bottom: 400,
+        right: 20,
         backgroundColor: '#5EBC7B',
         borderRadius: 50,
         justifyContent: 'center',

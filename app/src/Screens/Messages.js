@@ -78,7 +78,6 @@ export default function App() {
         <View>
             <Container component="message">
                 <FlatList style={styles.contact} data={Contacts} renderItem={({ item, index }) => <MessageCard item={item} key={index} />} keyExtractor={(item, index) => index.toString()} />
-                <NewAction />
             </Container>
         </View>
     );

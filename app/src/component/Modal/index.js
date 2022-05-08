@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, Modal, StyleSheet, Text, View, TouchableOpacity } from "react-native"
 import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons'; 
+import { FontAwesome5 } from '@expo/vector-icons';
 
 
-const Option = ({icon, title}) => {
+const Option = ({ icon, title }) => {
     return (
         <View style={styles.option}>
             <View style={styles.optionChild}>
@@ -30,11 +30,10 @@ const MyModal = () => {
             >
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
-                        <TouchableOpacity onPress={() => setModalVisible(false)} >
-                                <View style={styles.close} />
-                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.close} onPress={() => setModalVisible(false)}  />
+                        
                         <View style={styles.titleOptions}>
-                            <Text style={{fontWeight: '700'}}>Hangout Options !</Text>
+                            <Text style={{ fontWeight: '700' }}>Hangout Options !</Text>
                         </View>
                         <View style={styles.options}>
                             <Option icon="user-plus" title="Add Contact" />
@@ -51,10 +50,6 @@ const MyModal = () => {
 export default MyModal
 
 const styles = StyleSheet.create({
-    modal: {
-        backgroundColor: 'blue',
-        flex: 1,
-    },
     centeredView: {
         flex: 1,
         justifyContent: "flex-end",
@@ -70,7 +65,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         shadowColor: "#000",
         margin: 10,
-        marginBottom: 28,
+        marginBottom: 15,
         paddingHorizontal: 50,
     },
     options: {
@@ -95,13 +90,13 @@ const styles = StyleSheet.create({
     titleOptions: {
         marginBottom: 15
     },
-    close:{
+    close: {
         backgroundColor: '#5EBC7B',
         width: 70,
-        height: 50,
+        height: 10,
         borderRadius: 10,
-        marginTop: -35,
-        marginBottom:20
+        marginTop: -38,
+        marginBottom: 20
     }
 
 });

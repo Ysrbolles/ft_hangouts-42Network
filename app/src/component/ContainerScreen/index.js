@@ -2,6 +2,7 @@ import { FlatList, Pressable, ScrollView, StyleSheet, View } from "react-native"
 import { Header, Content } from "../../Screens";
 import MyModal from "../Modal";
 import { useNavigation } from "@react-navigation/native";
+import { NewAction } from "..";
 
 
 
@@ -18,6 +19,7 @@ const Container = ({ children, component }) => {
                     </Content>
                 </ScrollView>
             </View>
+            <NewAction />
             <MyModal />
         </View>
     )
