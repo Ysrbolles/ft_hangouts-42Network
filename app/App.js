@@ -73,7 +73,7 @@ const NewAction = () => {
 
 export default function App() {
 
-	const [isTab, setIsTab] = useState(false)
+	const [isTab, setIsTab] = useState(true)
 
 	useEffect(() => {
 		LogBox.ignoreLogs(["VirtualizedLists should never be nested"])
@@ -87,14 +87,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		marginTop: 20,
-		backgroundColor: '#fff',
-		paddingHorizontal: 20,
-		borderTopLeftRadius: 30,
-		borderTopRightRadius: 30,
-	},
 	newAction: {
 		width: 60,
 		height: 60,

@@ -21,7 +21,7 @@ export default Content;
 const styles = StyleSheet.create({
     container: {
         margin: 5,
-        padding: 10,
+        paddingTop: 10,
     },
     row: {
         padding: 5,

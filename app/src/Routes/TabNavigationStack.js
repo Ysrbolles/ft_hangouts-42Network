@@ -22,14 +22,16 @@ export default TabNavigationStack = () => {
                     tabBarShowLabel: false,
                     tabBarStyle: {
                         backgroundColor: '#EFF4F7',
-                        position: 'absolute',
-                        height: 90,
+                        // position: 'absolute',
+                        height: 70,
                         width: '100%',
                         right: 20,
-                        borderRadius: 5,
+                        borderTopLeftRadius: 30,
+                        borderTopRightRadius: 30,
+                        borderColor: 'black',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        padding: 10
+                        padding: 5
                     }
                 }}>
                 {Routes.map((route, index) => {

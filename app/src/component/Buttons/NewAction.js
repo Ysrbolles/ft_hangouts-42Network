@@ -1,13 +1,10 @@
-import { Pressable, View , StyleSheet} from "react-native"
+import { Pressable, View , StyleSheet, Alert} from "react-native"
 import { Entypo } from '@expo/vector-icons';
-import { useState } from "react";
+
 
 const NewAction = () => {
-
-   
- 
     return (
-        <Pressable onPress={() => alert("koka")}>
+        <Pressable onPress={() => console.log("koka")}>
             <View style={styles.newAction}>
                 <Entypo name="plus" size={24} color="white" />
             </View>
@@ -23,12 +20,13 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60,
         position: 'absolute',
-        bottom: 20,
-        right: 25,
+        bottom: 5,
+        right: 2,
         backgroundColor: '#5EBC7B',
         borderRadius: 50,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        zIndex: 5
     }
 
 })

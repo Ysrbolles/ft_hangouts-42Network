@@ -65,21 +65,16 @@ export default function App() {
     return (
         <View>
             <Container component="contact">
-                <FlatList data={Contacts} renderItem={({ item, index }) => <ContactCard item={item} key={index} />} keyExtractor={(item, index) => index.toString()} />
+                <FlatList style={styles.contact} data={Contacts} renderItem={({ item, index }) => <ContactCard item={item} key={index} />} keyExtractor={(item, index) => index.toString()} />
+                <NewAction />
             </Container>
-            <NewAction />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        // flex: 1,
-        marginTop: 20,
-        backgroundColor: '#fff',
-        paddingHorizontal: 20,
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
+    contact: {
+        height: '80%'
     }
 
 });
