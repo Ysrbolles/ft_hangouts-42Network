@@ -66,7 +66,6 @@ export default function App() {
         <View>
             <Container component="contact">
                 <FlatList style={styles.contact} data={Contacts} renderItem={({ item, index }) => <ContactCard item={item} key={index} />} keyExtractor={(item, index) => index.toString()} />
-                {/* <NewAction  /> */}
             </Container>
         </View>
     );
@@ -76,5 +75,4 @@ const styles = StyleSheet.create({
     contact: {
         height: '80%'
     }
-
 });

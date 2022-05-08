@@ -2,6 +2,7 @@ import { Button, Pressable, StyleSheet, Text, View } from "react-native"
 import App from "../../App";
 import HomeScreen from "../Screens/HomeScreen"
 import Messages from "../Screens/Messages";
+import AddContact from "../Screens/AddContact"
 
 const Test = () => {
     return (
@@ -33,8 +34,16 @@ export const Routes = [
             },
             tabBarBadge: 3,
             tabBarLabel: 'Messages',
-            //.... rest are the params for Tab.Screen See : https://reactnavigation.org/docs/bottom-tab-navigator/#options
           },
+    },
+    {
+        name: 'AddContact',
+        component: AddContact,
+        options: {
+            tabBarButton: (props) => {
+                return <Text></Text>;
+              },
+        }
     }
 ]
 
