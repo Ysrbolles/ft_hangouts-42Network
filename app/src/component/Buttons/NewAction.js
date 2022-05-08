@@ -4,10 +4,10 @@ import { Entypo } from '@expo/vector-icons';
 
 export default NewAction = () => {
     return (
-        <Pressable onPress={() => console.log('from')}>
-            <View style={styles.newAction} >
+        <Pressable >
+            <TouchableOpacity style={styles.newAction} onPress={() => console.log('from')}>
                 <Entypo name="plus" size={24} color="white" />
-            </View>
+            </TouchableOpacity>
         </Pressable>
     )
 }

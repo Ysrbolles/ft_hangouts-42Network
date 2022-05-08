@@ -30,7 +30,9 @@ const MyModal = () => {
             >
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
-                        <TouchableOpacity style={styles.close} onPress={() => setModalVisible(false)}  />
+                        <TouchableOpacity style={styles.close} onPress={() => {
+                            console.log("boka");
+                            setModalVisible(false)}}  />
                         
                         <View style={styles.titleOptions}>
                             <Text style={{ fontWeight: '700' }}>Hangout Options !</Text>
